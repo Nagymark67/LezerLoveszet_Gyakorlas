@@ -108,7 +108,7 @@ namespace LezerLoveszet
 
         private static void AtlagPontszam(float CeltablaX, float CeltablaY, List<JatekosLovese> lista)
         {
-            //Összes kilistázása debug céljából, itt kiderült, hogy van benne negatív érték is, így ki tudtam javítani.
+            //Összes kilistázása debug céljából.
             /*
             foreach (var item in lista)
             {
