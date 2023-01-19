@@ -177,7 +177,14 @@ namespace LezerLoveszet
                 JatekosAtlaga.Add(item, JatekosOsszPontszam[item] / JatekosLovesDb[item]);                
             }
             double NyertesPont = JatekosAtlaga.Values.Max();
-            Console.WriteLine("13. feladat: A játék nyertese: {0}", JatekosAtlaga.Where(x => x.Value.Equals(NyertesPont)).First().Key);
+            foreach (var item in JatekosAtlaga)
+            {
+                if (item.Value == NyertesPont)
+                {
+                    Console.WriteLine("13. feladat: Nyertes játékos: {0}", item.Key);
+                    break;
+                }
+            }
         }
     }
 }
