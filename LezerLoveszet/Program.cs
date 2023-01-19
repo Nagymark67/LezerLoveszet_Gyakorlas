@@ -108,13 +108,13 @@ namespace LezerLoveszet
 
         private static void AtlagPontszam(float CeltablaX, float CeltablaY, List<JatekosLovese> lista)
         {
+            //Összes kilistázása debug céljából, itt kiderült, hogy van benne negatív érték is, így ki tudtam javítani.
+            /*
             foreach (var item in lista)
             {
                 Console.WriteLine("{0} - {1}", item.Nev, item.Pontszam(CeltablaX, CeltablaY));
             }
-            {
-
-            }
+            */
             Dictionary<string, int> JatekosLovesDb = new Dictionary<string, int>();
             foreach (var item in lista)
             {
@@ -141,7 +141,7 @@ namespace LezerLoveszet
             }
             foreach (var item in JatekosLovesDb.Keys)
             {
-                Console.WriteLine("\t{0} - {1}", item, JatekosOsszPontszam[item]/JatekosLovesDb[item]);
+                Console.WriteLine("\t{0} - {1}", item, JatekosOsszPontszam[item] / JatekosLovesDb[item]);
             }
         }
 
