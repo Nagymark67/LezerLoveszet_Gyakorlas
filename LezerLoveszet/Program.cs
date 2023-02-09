@@ -139,6 +139,7 @@ namespace LezerLoveszet
                     JatekosOsszPontszam[item.Nev]+= item.Pontszam(CeltablaX, CeltablaY);
                 }
             }
+            Console.WriteLine("12. feladat: Átlagpontszámok");
             foreach (var item in JatekosLovesDb.Keys)
             {
                 Console.WriteLine("\t{0} - {1}", item, JatekosOsszPontszam[item] / JatekosLovesDb[item]);
